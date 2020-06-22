@@ -1,12 +1,12 @@
 angular.module('invoicing', [])
 
 // The default logo for the invoice
-.constant('DEFAULT_LOGO', 'images/metaware_logo.png')
+.constant('DEFAULT_LOGO', 'images/metaware_logo2.png')
 
 // The invoice displayed when the user first uses the app
 .constant('DEFAULT_INVOICE', {
   tax: 13.00,
-  invoice_number: 10,
+  //invoice_number: 10,
   customer_info: {
     name: ' Sheikh moin ',
     web_link: 'sheikh.moin1997@gmail.com',
@@ -15,14 +15,14 @@ angular.module('invoicing', [])
     postal: '560097'
   },
   company_info: {
-    name: 'Huzaifa Telecom',
-    web_link: 'www.huzaifatelecom.com',
-    address1: 'Ms Palya',
-    address2: 'Bengaluru',
-    postal: '560097'
+    name: ' hello',
+    web_link: 'hello',
+    address1: 'hello',
+    address2: 'hello',
+    postal: 'hello'
   },
   items:[
-    { qty: 10, description: 'Gadget', cost: 9.95 }
+  //  { qty: 10, description: 'Gadget', cost: 9.95 }
   ]
 })
 
@@ -94,28 +94,8 @@ angular.module('invoicing', [])
   service.all = function() {
     return [
       {
-        name: 'British Pound (£)',
-        symbol: '£'
-      },
-      {
-        name: 'Canadian Dollar ($)',
-        symbol: 'CAD $ '
-      },
-      {
-        name: 'Euro (€)',
-        symbol: '€'
-      },
-      {
         name: 'Indian Rupee (₹)',
         symbol: '₹'
-      },
-      {
-        name: 'Norwegian krone (kr)',
-        symbol: 'kr '
-      },
-      {
-        name: 'US Dollar ($)',
-        symbol: '$'
       }
     ]
   }
@@ -129,7 +109,7 @@ angular.module('invoicing', [])
   function($scope, $http, DEFAULT_INVOICE, DEFAULT_LOGO, LocalStorage, Currency) {
 
   // Set defaults
-  $scope.currencySymbol = '$';
+  $scope.currencySymbol = '₹';
   $scope.logoRemoved = false;
   $scope.printMode   = false;
 
